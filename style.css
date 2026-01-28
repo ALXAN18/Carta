@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* PANTALLA INICIAL */
+#cover {
+    position: absolute;
+    z-index: 5;
+}
+
+#openBtn {
+    padding: 14px 26px;
+    border: none;
+    border-radius: 30px;
+    background: #e63946;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* CARTA */
+.card {
+    background: #fff;
+    width: 92%;
+    max-width: 420px;
+    height: 80vh;
+    padding: 22px;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.6s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    color: #e63946;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* TEXTO */
+.text {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.text p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* FIRMA */
+.firma {
+    text-align: center;
+    font-style: italic;
+    font-size: 13px;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* BOTONES */
+#closeBtn {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #e63946;
+    color: white;
+    cursor: pointer;
+}
+
+/* CORAZONES */
+#hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    bottom: -10px;
+    font-size: 18px;
+    opacity: 0.8;
+    animation: rise 8s linear forwards;
+}
+
+@keyframes rise {
+    0% { transform: translateY(0) scale(0.8); opacity: 0; }
+    10% { opacity: 0.9; }
+    100% { transform: translateY(-110vh) scale(1.3); opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
